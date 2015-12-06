@@ -19,8 +19,8 @@
 (function($){
 	
 	$.fn.snow = function(options){
-	
-			var $flake 			= $('<div class="flake" />').css({'position': 'absolute', 'top': '-50px'}),
+
+			var $flake 			= $('<div class="flake" />').css({'position': 'absolute', 'top': '-50px', 'z-index': '9999'}),
 				documentHeight 	= $(document).height(),
 				documentWidth	= $(document).width(),
 				defaults		= {
@@ -32,7 +32,7 @@
 									durationMillis: null
 								},
 				options			= $.extend({}, defaults, options);
-							
+
 			$flake.html(options.flakeChar);
 
 			var interval		= setInterval( function(){
